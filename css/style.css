@@ -1,0 +1,368 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header{
+      background: radial-gradient(79.93% 251.58% at 23.18% 73.07%, #0d286b 0, #0c1035 44.41%, #101034 56.43%, #141034 69.58%, #301436 100%, #411958 0);
+      animation: gradientAnimation 3s normal infinite;
+      background-size: 200% 200%;
+      font-weight: bold;
+      font-family: "Times New Roman", Times, serif;
+
+/* Para mantener el header anclado */
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: transform 0.3s ease;
+}
+
+.header-hidden {
+      transform: translateY(-100%);
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 10%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 10%;
+  }
+}
+
+main{
+      background: radial-gradient(79.93% 251.58% at 23.18% 73.07%, #0142a0 0, #0f133a 44.41%, #101034 56.43%, #141034 69.58%, #301436 100%, #411958 0);
+      color: white;  
+      padding: 50px;
+      animation: gradientAnimation 3s normal infinite;
+      background-size: 200% 200%;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 10%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 10%;
+  }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1150px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 0;
+} 
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.logo-img{
+    height: auto;
+    width: 100px;
+}
+
+ /* movil */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    background-color: #fbbf24; /* yellow-400 */
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: 1px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        background: radial-gradient(79.93% 251.58% at 23.18% 73.07%, #0d286b 0, #0c1035 44.41%, #101034 56.43%, #141034 69.58%, #301436 100%, #411958 0);
+        width: 100%;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        z-index: 1000;
+        border-radius: 10px;
+    } 
+    
+    .nav-links.active {
+        max-height: 400px;
+    }
+
+    .nav-links li {
+        margin: 15px;
+        text-align: center;
+    }
+   
+}
+
+.parrafo-texto-contenido{
+    text-align: center;
+    font-weight: 700;
+}
+
+.parrafo-mishabilidades{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 2rem;
+}
+
+.footer-color {
+    background: radial-gradient(79.93% 251.58% at 23.18% 73.07%, #0d286b 0, #0c1035 44.41%, #101034 56.43%, #141034 69.58%, #301436 100%, #411958 0);
+    color: white;
+    padding: 0.5rem;
+    margin-top: 0rem;
+    animation: gradientAnimation 3s normal infinite;
+    background-size: 200% 200%;
+} 
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 10%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 10%;
+  }
+}
+
+.card{
+    border-radius: 10px;
+    width: 20rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    min-height: 300px;
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 100%;
+        max-width: 18rem;
+    }
+}
+
+/* Tarjetas de igual altura para la sección de habilidades */
+#habilidades .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#habilidades .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title{
+    color: black;
+}
+.card-text{
+    color: black;
+}
+
+
+
+/* Reducir tamaño del carousel */
+#carouselExampleInterval {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+#carouselExampleInterval .carousel-inner img {
+    height: 400px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    #carouselExampleInterval {
+        max-width: 90%;
+    }
+
+    #carouselExampleInterval .carousel-inner img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    #carouselExampleInterval {
+        max-width: 95%;
+    }
+
+    #carouselExampleInterval .carousel-inner img {
+        height: 200px;
+    }
+}
+
+/* Responsivo de las habilidades cards */
+.container-main .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+#habilidades .row {
+    justify-content: center !important;
+    align-items: center;
+}
+
+#habilidades .col, #habilidades .col-lg-4, #habilidades .col-md-6, #habilidades .col-sm-12 {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 auto;
+    box-shadow: 10px 10px 50px #babecc;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .container-main .row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 18rem;
+    }
+}
+
+@media (min-width: 769px) {
+    #habilidades .row {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 3rem !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+    }
+
+    #habilidades .card {
+        width: 18rem;
+        margin: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 100%;
+        max-width: 15rem;
+    }
+}
+
+.carousel-inner{
+    border-radius: 20px;
+    box-shadow: 12px 12px 30px #9fa3ae;
+    border-radius: 10px;
+}
+
+
+/* Para las imagenes de mi experiencia */
+.images-experiencia {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+    box-shadow: 8px 8px 20px #9fa3ae;
+    border-radius: 10px;
+    padding: 3rem;
+    margin-top: 30px;
+}
+
+.images-experiencia img {
+    max-height: 250px;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+/* Esta media query sera es para las imagenes responsica en pantallas pequeñas */
+@media (max-width: 576px) {
+    .images-experiencia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: visible;
+    }
+}
+
+/* para mi cursor*/
+.cursor-shadow {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; /* Para que sea circular */
+  background-color: rgba(3, 207, 243, 0.984); /* Un color semitransparente para la sombra */
+  filter: blur(8px); /* Para suavizar los bordes */
+  pointer-events: none; /* Ignora clics e interacciones */
+  transition: transform 0.1s ease; /* Transición suave para que el movimiento sea fluido */
+  z-index: 9999; /* Asegura que esté siempre encima de otros elementos */
+}
+
+
+
+.modal-body{
+    color: #101034;
+}
+
+

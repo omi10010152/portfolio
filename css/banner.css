@@ -1,0 +1,83 @@
+.main-banner{
+      background: radial-gradient(79.93% 251.58% at 23.18% 73.07%, #0142a0 0, #0f133a 44.41%, #101034 56.43%, #141034 69.58%, #301436 100%, #411958 0);
+      color: white;  
+      padding: 50px;
+      animation: gradientAnimation 3s normal infinite;
+      background-size: 200% 200%;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 10%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 10%;
+  }
+}
+
+
+@media (min-width: 1024px) {
+    .grid-container {
+       display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1260px;
+        margin: auto;
+        gap: 14rem;
+        margin-top: 100px;
+    }
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+@media (min-width: 1024px){
+    .title{
+        font-size: 2.5rem;
+    }
+}
+
+.subtitle{
+    margin-top: 30px;
+}
+
+.line-2 {
+    color: orange;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+    .description {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .description {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1024px){
+    .content {
+        padding-top: 3rem;
+    }
+}
+
+.s-center {
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .s-center {
+        text-align: left;
+    }
+}
